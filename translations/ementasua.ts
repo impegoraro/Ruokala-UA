@@ -4,23 +4,23 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Refeitorio Santiago</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Refeitorio Crasto</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Snack Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Ementas UA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Develop by: Ilan Pegoraro</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Refeit��rio de Santiago</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snack-Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Refeit��rio do Crasto</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -32,6 +32,10 @@
     </message>
     <message>
         <source>Refrescar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jantar</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

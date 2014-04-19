@@ -42,18 +42,41 @@ Page {
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
-                text: qsTr("Refeitorio Santiago")
-                onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                text: qsTr("Refeitório de Santiago")
+                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                onClicked: {
+                    var page = Qt.resolvedUrl("SecondPage.qml")
+                    appEmentas.canteen = "Refeitório de Santiago"
+                    appEmentas.type = "Almoço"
+
+                    pageStack.push(page)
+
+                }
             }
 
             MenuItem {
-                text: qsTr("Refeitorio Crasto")
-                onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                text: qsTr("Refeitório do Crasto")
+                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                onClicked: {
+                    var page = Qt.resolvedUrl("SecondPage.qml")
+                    appEmentas.canteen = "Refeitório do Crasto"
+                    appEmentas.type = "Almoço"
+                    pageStack.push(page)
+
+                }
             }
 
             MenuItem {
-                text: qsTr("Snack Bar")
-                onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                text: qsTr("Snack-Bar")
+
+                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                onClicked: {
+                    var page = Qt.resolvedUrl("SecondPage.qml")
+                    appEmentas.canteen = "Snack-Bar/Self"
+                    appEmentas.type = "Almoço"
+                    pageStack.push(page)
+
+                }
             }
         }
 
@@ -85,11 +108,13 @@ Page {
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeLarge
             }
+            BusyIndicator {
+                anchors.centerIn: parent
+                running: false
+                visible: false
+            }
         }
-        BusyIndicator {
-            anchors.centerIn: parent
-            running: true
-        }
+        VerticalScrollDecorator {}
     }
 
 }

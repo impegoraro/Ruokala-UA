@@ -21,6 +21,7 @@ URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  ementasua.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
+Requires:   qt5-qtdeclarative-import-xmllistmodel
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
@@ -28,7 +29,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 %description
-Short description of my SailfishOS Application
+An application that allows you to consult the food menu from Aveiro's university canteen
 
 
 %prep

@@ -1,5 +1,5 @@
 Name: ementasua
-Summary: Ementas
+Summary: Ementas UA
 Version: 0.1
 Release: 1
 # The contents of the Group field must be one of the groups listed here:
@@ -33,6 +33,7 @@ PkgConfigBR:
 # Runtime dependencies which are not automatically detected
 Requires:
   - sailfishsilica-qt5 >= 0.10.9 
+  - qt5-qtdeclarative-import-xmllistmodel
 
 # All installed files
 Files:
