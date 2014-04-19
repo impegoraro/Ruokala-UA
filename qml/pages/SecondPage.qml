@@ -38,7 +38,7 @@ Page {
     XmlListModel {
         id: xml_Data
         source: "http://services.web.ua.pt/sas/ementas?date=week"
-        query: "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='Tue, 22 Apr 2014 00:00:00 +0100']/items/item"
+        query: "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
 
         XmlRole { name: "name"; query: "@name/string()" }
         XmlRole { name: "desc"; query: "string()" }
@@ -55,15 +55,18 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Almoço")
-                onClicked: { myHeader.title = "Almoço";
+                onClicked: {
                     appEmentas.type = "Almoço"
+                    var strDate = Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100";
                     xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='Tue, 22 Apr 2014 00:00:00 +0100']/items/item"
+
                 }
             }
             MenuItem {
                 text: qsTr("Jantar")
-                onClicked: { myHeader.title = "Jantar";
+                onClicked: {
                     appEmentas.type = "Jantar"
+                    var strDate = Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100";
                     xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='Tue, 22 Apr 2014 00:00:00 +0100']/items/item"
                 }
             }
@@ -81,27 +84,24 @@ Page {
 
             PageHeader { id: myHeader; title: qsTr(canteen)  }
             Label {
-                id: lblCanteen
-                x: Theme.paddingExtraLarge;
+                id: lblType
+                x: Theme.paddingLarge
                 color: Theme.highlightColor
-                text: appEmentas.canteen
-                anchors.left: parent.left
-                anchors.right: parent.right
+                text: appEmentas.type
             }
 
             SilicaListView {
                 id: listView1
-                property Item contextMenu
                 //height: page.height
                 width: page.width
+                property Item contextMenu
                 property bool menuOpen: contextMenu != null && contextMenu.parent === myListItem
                 height: menuOpen ? contextMenu.height + contentItem.height : contentItem.height
-                //model: myModel
                 model: xml_Data
+
                 anchors {
                     left: parent.left
                     right: parent.right
-                    margins: Theme.paddingLarge
                 }
 
                 delegate: Item {

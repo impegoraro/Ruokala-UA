@@ -39,6 +39,7 @@ ApplicationWindow
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     property string canteen: ""
     property string type: ""
+    property date cdate: new Date();
 }
 
 

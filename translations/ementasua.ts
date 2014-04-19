@@ -38,6 +38,14 @@
         <source>Jantar</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Partilhado</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copiado</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ThirdPage</name>

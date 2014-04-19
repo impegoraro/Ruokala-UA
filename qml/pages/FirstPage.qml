@@ -94,6 +94,16 @@ Page {
                 title: qsTr("Ementas UA")
             }
 
+            Image {
+                id: image1
+                source: "ementasua.png";
+                anchors.left: parent.left
+                anchors.right: parent.right
+
+                width: 128
+                height: 128
+            }
+
             Label {
                 x: Theme.paddingLarge
                 verticalAlignment: Text.AlignVCenter
