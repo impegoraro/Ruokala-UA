@@ -25,9 +25,7 @@ OTHER_FILES += qml/ementasua.qml \
     rpm/ementasua.spec \
     rpm/ementasua.yaml \
     translations/*.ts \
-    ementasua.desktop \
-    qml/pages/ThirdPage.qml \
-    qml/pages/test.qml
+    ementasua.desktop
 
 # to disable building translations every time, comment out the
 # following CONFIG line

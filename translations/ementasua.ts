@@ -46,34 +46,12 @@
         <source>Copiado</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>ThirdPage</name>
     <message>
-        <source>Refeitorio Santiago</source>
+        <source>N��o seram servidas refei����es nesta cantina</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Refeitorio Crasto</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Snack Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ementas UA</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Develop by: Ilan Pegoraro</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>test</name>
-    <message>
-        <source>Nested Page</source>
+        <source>Encerrado</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

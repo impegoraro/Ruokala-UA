@@ -58,7 +58,7 @@ Page {
                 onClicked: {
                     appEmentas.type = "Almoço"
                     var strDate = Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100";
-                    xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='Tue, 22 Apr 2014 00:00:00 +0100']/items/item"
+                    xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
 
                 }
             }
@@ -67,7 +67,7 @@ Page {
                 onClicked: {
                     appEmentas.type = "Jantar"
                     var strDate = Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100";
-                    xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='Tue, 22 Apr 2014 00:00:00 +0100']/items/item"
+                    xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
                 }
             }
             MenuItem {
@@ -83,11 +83,38 @@ Page {
             spacing: 20
 
             PageHeader { id: myHeader; title: qsTr(canteen)  }
-            Label {
-                id: lblType
+            Row {
+                spacing: parent.width - lblDate.width - 135
+                id: rowTitle
                 x: Theme.paddingLarge
-                color: Theme.highlightColor
-                text: appEmentas.type
+                width: page.width
+                Label {
+                    id: lblType
+
+                    x: Theme.paddingLarge
+                    color: Theme.secondaryHighlightColor
+                    font.pixelSize: Theme.fontSizeSmall
+                    text: appEmentas.type
+                }
+                Label {
+                    id: lblDate
+                    anchors.left: myHeader.left
+                    font.pixelSize: Theme.fontSizeSmall
+                    text: Qt.formatDateTime(cdate, "ddd, dd MMM yyyy")
+                    color: Theme.secondaryHighlightColor
+                    horizontalAlignment: Text.AlignRight
+                    //color: highlighted ? theme.highlightColor : theme.primaryColor
+                }
+                /*ComboBox {
+                    id: lblDate
+                    currentIndex: 1
+                    label: "Data"
+                    menu: ContextMenu {
+                        MenuItem { text: Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") }
+                        MenuItem { text: "Amanhã" }
+                        MenuItem { text: "Escolher data..." }
+                    }
+                }*/
             }
 
             SilicaListView {
@@ -129,10 +156,12 @@ Page {
                             Label {
                                 id: lblDescrip
                                 y: Theme.paddingLarge
+                                width: parent.width
                                 text : desc
                                 color: Theme.highlightColor
-                                //wrapMode: Text.WordWrap
-                                truncationMode: TruncationMode.Fade
+                                wrapMode: Text.WordWrap
+                                //truncationMode: TruncationMode.Fade
+
                                 anchors {
                                     left: parent.left
                                     right: parent.right
@@ -147,6 +176,35 @@ Page {
                         }*/
                     }
                 }
+
+            }
+            Label {
+                x: Theme.paddingLarge
+                id: lblClosed1
+                visible: xml_Data.empty
+                width: parent.width
+                //horizontalAlignment: HorizontalAlignment.Center
+                //verticalAlignment: VerticalAlignment.Center
+                wrapMode: Text.WordWrap
+                font.pixelSize: Theme.fontSizeLarge
+
+                color: Theme.highlightColor
+                text: qsTr("Encerrado")
+
+            }
+            Label {
+                id: lblClosed2
+                y: Theme.paddingSmall
+                x: Theme.paddingLarge
+                visible: xml_Data.empty
+                width: lblClosed1.width
+                //horizontalAlignment: HorizontalAlignment.Center
+                //verticalAlignment: VerticalAlignment.Center
+                wrapMode: Text.WordWrap
+                font.pixelSize: Theme.fontSizeMedium
+
+                color: Theme.secondaryHighlightColor
+                text: qsTr("Não seram servidas refeições nesta cantina")
 
             }
 

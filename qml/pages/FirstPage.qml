@@ -96,12 +96,11 @@ Page {
 
             Image {
                 id: image1
-                source: "ementasua.png";
+                source: "../../../icons/hicolor/86x86/apps/ementasua.png";
                 anchors.left: parent.left
                 anchors.right: parent.right
-
-                width: 128
-                height: 128
+                width: 512
+                height: 512
             }
 
             Label {
