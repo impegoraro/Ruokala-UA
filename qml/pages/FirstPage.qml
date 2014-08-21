@@ -117,12 +117,15 @@ Page {
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeLarge
             }
-            BusyIndicator {
-                anchors.centerIn: parent
-                running: false
-                visible: false
+
+            ProgressBar {
+                id: progressBar
+                indeterminate: true
+                width: parent.width
             }
         }
+
+
         VerticalScrollDecorator {}
     }
 
