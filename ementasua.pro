@@ -25,7 +25,8 @@ OTHER_FILES += qml/ementasua.qml \
     rpm/ementasua.spec \
     rpm/ementasua.yaml \
     translations/*.ts \
-    ementasua.desktop
+    ementasua.desktop \
+    qml/pages/PickDate.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

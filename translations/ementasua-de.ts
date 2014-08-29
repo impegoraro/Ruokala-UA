@@ -5,23 +5,85 @@
     <name>FirstPage</name>
     <message>
         <source>Show Page 2</source>
-        <translation>Zur Seite 2</translation>
+        <translation type="obsolete">Zur Seite 2</translation>
     </message>
     <message>
         <source>UI Template</source>
-        <translation>UI-Vorlage</translation>
+        <translation type="obsolete">UI-Vorlage</translation>
     </message>
     <message>
         <source>Hello Sailors</source>
-        <translation>Hallo Matrosen</translation>
+        <translation type="obsolete">Hallo Matrosen</translation>
+    </message>
+    <message>
+        <source>Refeit��rio de Santiago</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Refeit��rio do Crasto</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Snack-Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ementas UA</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Develop by: Ilan Pegoraro</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PickDate</name>
+    <message>
+        <source>Escolher Data</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SecondPage</name>
     <message>
         <source>Nested Page</source>
-        <translation>Unterseite</translation>
+        <translation type="obsolete">Unterseite</translation>
+    </message>
+    <message>
+        <source>Almo��o</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jantar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Refrescar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encerrado</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>N��o seram servidas refei����es nesta cantina</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Partilhado</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copiado</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Amanh��</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Escolher data</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
-

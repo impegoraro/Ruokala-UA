@@ -38,19 +38,40 @@ Page {
     XmlListModel {
         id: xml_Data
         source: "http://services.web.ua.pt/sas/ementas?date=week"
+        // Qt.formatDateTime(cdate, "ddd, dd MMM yyyy")
         query: "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
 
         XmlRole { name: "name"; query: "@name/string()" }
         XmlRole { name: "desc"; query: "string()" }
 
         onXmlChanged: console.log("XML Changed")
-        onProgressChanged: console.log("Progess Changed")
     }
 
     SilicaFlickable {
         id: listFoods
         anchors.fill: parent
         contentHeight: innCol.height
+
+        PushUpMenu {
+            MenuItem {
+                text: qsTr("Amanhã")
+                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                onClicked: {
+                    appEmentas.cdate.setDay(appEmentas.cdate.getDay() + 1);
+                    xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
+                }
+            }
+
+            MenuItem {
+                text: qsTr("Escolher data")
+                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                onClicked: {
+                     var page = Qt.resolvedUrl("PickDate.qml")
+                     pageStack.push(page)
+
+                }
+            }
+        }
 
         PullDownMenu {
             MenuItem {

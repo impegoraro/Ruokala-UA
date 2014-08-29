@@ -25,6 +25,13 @@
     </message>
 </context>
 <context>
+    <name>PickDate</name>
+    <message>
+        <source>Escolher Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SecondPage</name>
     <message>
         <source>Almo��o</source>
@@ -52,6 +59,14 @@
     </message>
     <message>
         <source>Encerrado</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Amanh��</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Escolher data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

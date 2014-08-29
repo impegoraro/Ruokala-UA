@@ -31,65 +31,32 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-CoverBackground {
 
+Page {
+    id: page
 
-    Column {
+    // To enable PullDownMenu, place our content in a SilicaFlickable
+    SilicaFlickable {
         anchors.fill: parent
-        Label {
-            id: labelTitleCanteen
-            anchors.top: parent
-            text: "R. Santiago"
-            scale: 0.65
-        }
 
-        Label {
-            id: labelTitleNormal
-            anchors.top: parent
-            text: "Prato normal"
-            scale: 0.65
-        }
 
-        Label {
-            id: labelPratoNormal
+        // Tell SilicaFlickable the height of its content.
+        contentHeight: column.height
 
-            text: "Franco com batatas"
-            scale: 0.50
-        }
+        Column {
+            id: column
 
-        Label {
-            id: labelTitleExtra
-            text: "Prato extra"
-            scale: 0.65
-        }
-        Label {
+            width: page.width
+            spacing: Theme.paddingLarge
+            PageHeader {
+                title: qsTr("Escolher Data")
+            }
 
-            id: labelPratoExtra
-
-            text: "Frango com arroz"
-            scale: 0.50
-        }
-    }
-
-    CoverActionList {
-        id: coverAction
-
-        CoverAction {
-            iconSource: "image://theme/icon-cover-next"
-
-            onTriggered: {
-                console.log("Conver action...")
-                if(labelTitleCanteen.text  == "R. Santiago") {
-                    labelTitleCanteen.text = "R. Crasto"
-                }
-                else if(labelTitleCanteen.text == "R. Crasto") {
-                    labelTitleCanteen.text = "Snack Bar"
-                } else {
-                    labelTitleCanteen.text = "R. Santiago"
-                }
-
+            DatePicker {
+                anchors.fill: parent
             }
         }
+
     }
 }
 
