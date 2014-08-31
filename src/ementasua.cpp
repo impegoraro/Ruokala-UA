@@ -54,20 +54,10 @@ int main(int argc, char *argv[])
     // To display the view, call "show()" (will show fullscreen on device).
 
 
-    QList<QObject*> list;
-    list.append(new CanteenMenu("Sopa", "Sopa de legumes"));
-    list.append(new CanteenMenu("Prato normal carne", "Feijoada à portuguesa com arroz"));
-    list.append(new CanteenMenu("Prato normal peixe", "Badajo no forno com batata assada"));
-    list.append(new CanteenMenu("Prato dieta", "Carne de porco cozida com arroz e ervilhas"));
-    list.append(new CanteenMenu("Salada", "Buffer de saladas"));
-    list.append(new CanteenMenu("Sobremesa", "Fruta da época"));
-
     QGuiApplication *app = SailfishApp::application(argc, argv);
     QQuickView *view = SailfishApp::createView();
     view->setSource(SailfishApp::pathTo("qml/ementasua.qml"));
     view->setResizeMode(QQuickView::SizeRootObjectToView);
-    QQmlContext *ctxt = view->rootContext();
-    ctxt->setContextProperty("myModel", QVariant::fromValue(list));
     view->show();
     return app->exec();
 

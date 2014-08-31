@@ -14,8 +14,7 @@ TARGET = ementasua
 
 CONFIG += sailfishapp
 
-SOURCES += src/ementasua.cpp \
-    src/canteenmenu.cpp
+SOURCES += src/ementasua.cpp
 
 OTHER_FILES += qml/ementasua.qml \
     qml/cover/CoverPage.qml \
@@ -33,6 +32,5 @@ OTHER_FILES += qml/ementasua.qml \
 CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/ementasua-de.ts
 
-HEADERS += \
-    src/canteenmenu.h
+HEADERS +=
 

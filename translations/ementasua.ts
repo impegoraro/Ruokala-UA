@@ -69,5 +69,9 @@
         <source>Escolher data</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Ontem</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

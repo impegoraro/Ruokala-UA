@@ -54,6 +54,7 @@ Page {
 
             DatePicker {
                 anchors.fill: parent
+                date: cdate
             }
         }
 

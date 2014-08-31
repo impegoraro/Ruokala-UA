@@ -55,10 +55,32 @@ Page {
         PushUpMenu {
             MenuItem {
                 text: qsTr("Amanhã")
-                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
                 onClicked: {
-                    appEmentas.cdate.setDay(appEmentas.cdate.getDay() + 1);
+                    var day = parseInt(Qt.formatDateTime(cdate, "dd")) + 1
+                    var year = parseInt(Qt.formatDateTime(cdate, "yyyy"))
+                    var month = parseInt(Qt.formatDateTime(cdate, "MM")) - 1 // Seemed to obtain the next month
+
+                    console.log (day + "/" + month + "/" + year)
+
+                    cdate = new Date(year, month, day)
+
                     xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
+                    console.log(xml_data.query)
+                }
+            }
+            MenuItem {
+                text: qsTr("Ontem")
+                onClicked: {
+                    var day = parseInt(Qt.formatDateTime(cdate, "dd")) - 1
+                    var year = parseInt(Qt.formatDateTime(cdate, "yyyy"))
+                    var month = parseInt(Qt.formatDateTime(cdate, "MM")) - 1 // Seemed to obtain the next month
+
+                    console.log (day + "/" + month + "/" + year)
+
+                    cdate = new Date(year, month, day)
+
+                    xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
+                    console.log(xml_data.query)
                 }
             }
 
@@ -119,7 +141,7 @@ Page {
                 }
                 Label {
                     id: lblDate
-                    anchors.left: myHeader.left
+
                     font.pixelSize: Theme.fontSizeSmall
                     text: Qt.formatDateTime(cdate, "ddd, dd MMM yyyy")
                     color: Theme.secondaryHighlightColor
@@ -202,7 +224,7 @@ Page {
             Label {
                 x: Theme.paddingLarge
                 id: lblClosed1
-                visible: xml_Data.empty
+                visible: xml_Data.count == 0
                 width: parent.width
                 //horizontalAlignment: HorizontalAlignment.Center
                 //verticalAlignment: VerticalAlignment.Center
@@ -217,7 +239,7 @@ Page {
                 id: lblClosed2
                 y: Theme.paddingSmall
                 x: Theme.paddingLarge
-                visible: xml_Data.empty
+                visible: xml_Data.count == 0
                 width: lblClosed1.width
                 //horizontalAlignment: HorizontalAlignment.Center
                 //verticalAlignment: VerticalAlignment.Center

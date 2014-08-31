@@ -40,7 +40,7 @@ CoverBackground {
             id: labelTitleCanteen
             anchors.top: parent
             text: "R. Santiago"
-            scale: 0.65
+            scale: 0.85
         }
 
         Label {

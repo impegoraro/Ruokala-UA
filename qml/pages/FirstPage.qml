@@ -122,6 +122,7 @@ Page {
                 id: progressBar
                 indeterminate: true
                 width: parent.width
+                visible: false
             }
         }
 

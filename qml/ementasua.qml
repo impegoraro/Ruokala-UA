@@ -40,6 +40,8 @@ ApplicationWindow
     property string canteen: ""
     property string type: ""
     property date cdate: new Date();
+    //property date cdate :  new Date(2014, 8, 2, 9, 0, 0)
+
 }
 
 
