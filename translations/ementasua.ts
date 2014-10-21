@@ -2,25 +2,45 @@
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
-    <name>FirstPage</name>
+    <name>MenusPage</name>
     <message>
-        <source>Ementas UA</source>
+        <source>Dia Seguinte</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Develop by: Ilan Pegoraro</source>
+        <source>Dia Anterior</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Refeit��rio de Santiago</source>
+        <source>Escolher data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Snack-Bar</source>
+        <source>Almo��o</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Refeit��rio do Crasto</source>
+        <source>Jantar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Refrescar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encerrado</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>N��o seram servidas refei����es nesta cantina</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Partilhado</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copiado</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -32,45 +52,25 @@
     </message>
 </context>
 <context>
-    <name>SecondPage</name>
+    <name>WelcomePage</name>
     <message>
-        <source>Almo��o</source>
+        <source>Refeit��rio de Santiago</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Refrescar</source>
+        <source>Refeit��rio do Crasto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Jantar</source>
+        <source>Snack-Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Partilhado</source>
+        <source>Ementas UA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copiado</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>N��o seram servidas refei����es nesta cantina</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Encerrado</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Amanh��</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Escolher data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ontem</source>
+        <source>Develop by: Ilan Pegoraro</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

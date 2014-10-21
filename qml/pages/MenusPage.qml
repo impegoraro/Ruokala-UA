@@ -54,7 +54,7 @@ Page {
 
         PushUpMenu {
             MenuItem {
-                text: qsTr("Amanhã")
+                text: qsTr("Dia Seguinte")
                 onClicked: {
                     var day = parseInt(Qt.formatDateTime(cdate, "dd")) + 1
                     var year = parseInt(Qt.formatDateTime(cdate, "yyyy"))
@@ -65,11 +65,11 @@ Page {
                     cdate = new Date(year, month, day)
 
                     xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
-                    console.log(xml_data.query)
+                    console.log(xml_Data.query)
                 }
             }
             MenuItem {
-                text: qsTr("Ontem")
+                text: qsTr("Dia Anterior")
                 onClicked: {
                     var day = parseInt(Qt.formatDateTime(cdate, "dd")) - 1
                     var year = parseInt(Qt.formatDateTime(cdate, "yyyy"))
@@ -80,7 +80,7 @@ Page {
                     cdate = new Date(year, month, day)
 
                     xml_Data.query = "/result/menus/menu[@canteen='" + appEmentas.canteen + "' and @meal='"  + appEmentas.type + "' and @date='" + Qt.formatDateTime(cdate, "ddd, dd MMM yyyy") + " 00:00:00 +0100" +"']/items/item"
-                    console.log(xml_data.query)
+                    console.log(xml_Data.query)
                 }
             }
 
@@ -198,7 +198,7 @@ Page {
 
                             Label {
                                 id: lblDescrip
-                                y: Theme.paddingLarge
+                                //y: Theme.paddingLarge
                                 width: parent.width
                                 text : desc
                                 color: Theme.highlightColor

@@ -39,7 +39,7 @@
 
 #include <sailfishapp.h>
 
-#include "canteenmenu.h"
+//#include "canteenmenu.h"
 
 
 int main(int argc, char *argv[])

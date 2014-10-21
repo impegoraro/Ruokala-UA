@@ -18,14 +18,14 @@ SOURCES += src/ementasua.cpp
 
 OTHER_FILES += qml/ementasua.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/ementasua.changes.in \
     rpm/ementasua.spec \
     rpm/ementasua.yaml \
     translations/*.ts \
     ementasua.desktop \
-    qml/pages/PickDate.qml
+    qml/pages/PickDate.qml \
+    qml/pages/MenusPage.qml \
+    qml/pages/WelcomePage.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

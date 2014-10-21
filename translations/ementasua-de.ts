@@ -15,39 +15,20 @@
         <source>Hello Sailors</source>
         <translation type="obsolete">Hallo Matrosen</translation>
     </message>
-    <message>
-        <source>Refeit��rio de Santiago</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Refeit��rio do Crasto</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Snack-Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ementas UA</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Develop by: Ilan Pegoraro</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
-    <name>PickDate</name>
+    <name>MenusPage</name>
     <message>
-        <source>Escolher Data</source>
+        <source>Dia Seguinte</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>SecondPage</name>
     <message>
-        <source>Nested Page</source>
-        <translation type="obsolete">Unterseite</translation>
+        <source>Dia Anterior</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Escolher data</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Almo��o</source>
@@ -77,16 +58,41 @@
         <source>Copiado</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>PickDate</name>
     <message>
-        <source>Amanh��</source>
+        <source>Escolher Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SecondPage</name>
+    <message>
+        <source>Nested Page</source>
+        <translation type="obsolete">Unterseite</translation>
+    </message>
+</context>
+<context>
+    <name>WelcomePage</name>
+    <message>
+        <source>Refeit��rio de Santiago</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Escolher data</source>
+        <source>Refeit��rio do Crasto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ontem</source>
+        <source>Snack-Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ementas UA</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Develop by: Ilan Pegoraro</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

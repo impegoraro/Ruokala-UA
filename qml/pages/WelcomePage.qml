@@ -43,9 +43,9 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Refeitório de Santiago")
-                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                //onClicked: pageStack.push(Qt.resolvedUrl("menusPage.qml"))
                 onClicked: {
-                    var page = Qt.resolvedUrl("SecondPage.qml")
+                    var page = Qt.resolvedUrl("menusPage.qml")
                     appEmentas.canteen = "Refeitório de Santiago"
                     appEmentas.type = "Almoço"
 
@@ -56,9 +56,9 @@ Page {
 
             MenuItem {
                 text: qsTr("Refeitório do Crasto")
-                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+
                 onClicked: {
-                    var page = Qt.resolvedUrl("SecondPage.qml")
+                    var page = Qt.resolvedUrl("menusPage.qml")
                     appEmentas.canteen = "Refeitório do Crasto"
                     appEmentas.type = "Almoço"
                     pageStack.push(page)
@@ -69,9 +69,9 @@ Page {
             MenuItem {
                 text: qsTr("Snack-Bar")
 
-                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                //onClicked: pageStack.push(Qt.resolvedUrl("menusPage.qml"))
                 onClicked: {
-                    var page = Qt.resolvedUrl("SecondPage.qml")
+                    var page = Qt.resolvedUrl("menusPage.qml")
                     appEmentas.canteen = "Snack-Bar/Self"
                     appEmentas.type = "Almoço"
                     pageStack.push(page)

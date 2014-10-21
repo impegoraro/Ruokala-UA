@@ -35,29 +35,39 @@ import Sailfish.Silica 1.0
 Page {
     id: page
 
-    // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
         anchors.fill: parent
-
-
-        // Tell SilicaFlickable the height of its content.
         contentHeight: column.height
 
         Column {
-            id: column
+            id: innCol
+            width: parent.width
+            height: height.width
+            spacing: 20
 
-            width: page.width
-            spacing: Theme.paddingLarge
-            PageHeader {
-                title: qsTr("Escolher Data")
-            }
+            PageHeader { id: myHeader; title: qsTr("Escolher Data") }
 
             DatePicker {
-                anchors.fill: parent
-                date: cdate
+                id: datePicker
+
+                delegate: MouseArea {
+                    width: datePicker.width / 7
+                    height: width
+
+                    onClicked: {
+                        datePicker.date = new Date(year, month-1, day, 12, 0, 0)
+                        cdate = datePicker.date;
+                        pageStack.pop();
+                    }
+
+                    Label {
+                        anchors.centerIn: parent
+                        text: day
+
+                    }
+                }
             }
         }
-
     }
 }
 
