@@ -35,7 +35,7 @@ import "pages"
 ApplicationWindow
 {
     id: appEmentas
-    initialPage: Component { FirstPage { } }
+    initialPage: Component { WelcomePage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     property string canteen: ""
     property string type: ""
